@@ -1,0 +1,24 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "first step with sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass index.scss index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muneeb316/Advance-Css-Sass.git"
+  },
+  "author": "Muneeb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muneeb316/Advance-Css-Sass/issues"
+  },
+  "homepage": "https://github.com/Muneeb316/Advance-Css-Sass#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "dependencies": {}
+}

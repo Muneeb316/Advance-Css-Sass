@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+$color-primary: #f9ed69;
+$color-secondry: #f88a5d;
+$color-tertiory: #b83b5e;
+$color-text-dark: #333;
+$width-button: 150px;
+$color-text-light: #eee;
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear:both;
+        display:table;
+    }
+}
+@mixin style-link-text($col) {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $col;
+
+}
+nav {
+    margin: 30px;
+    background-color: $color-primary;
+    @include clearfix;
+  
+}
+.clearfix::after {
+    content: "";
+    clear:both;
+    display:table;
+}
+.navigations {
+    list-style: none;
+    float: left;
+
+    li {
+        display: inline-block;
+        margin-left: 30px;
+
+        &:first-child {
+            margin: 0;
+        }
+        a:link {
+        @include style-link-text($color-text-dark);
+            
+        }
+    }   
+}
+.button {
+    float: right;
+}
+%btn-placeholder {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    width: $width-button;
+    @include style-link-text($color-text-light);
+}
+.btn-main {
+    &:link {
+        @extend %btn-placeholder;
+        background-color: $color-secondry;
+    }
+    &:hover {
+        background-color: darken($color-secondry, 15%)
+    }
+}
+.btn-hot {
+    &:link {
+        @extend %btn-placeholder;
+        background-color: $color-tertiory;
+    }
+    &:hover {
+        background-color: darken($color-tertiory, 15%)
+    }
+}
