@@ -10,8 +10,8 @@ html {
     // This defines what 1rem is
     font-size: 62.5%;
 
-    @include respond(phone) {
-        font-size: 50%;
+    @include respond(tap-land) {
+        font-size: 56.25%;
     }
     @include respond(tab-port) {
         font-size: 50%;
@@ -23,4 +23,8 @@ html {
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }

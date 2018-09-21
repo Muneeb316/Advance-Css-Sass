@@ -4,8 +4,17 @@
     
 
     &:not(:last-child) {
-        margin-bottom: $gutter-horizontal;
+        margin-bottom: $gutter-vertical;
     }
+
+    @include respond(tab-port) {
+        margin-bottoms: $gutter-vertical-small;
+    }
+    @include respond(tab-port) {
+        margin-bottoms: 50rem;
+        padding: 0 3rem;
+    }
+
     @include clearfix;
 
     [class^="col-"]{
@@ -13,6 +22,15 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tab-port) {
+               margin-right: 0;
+               margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
         }
     }
     .col-1-of-2 {
